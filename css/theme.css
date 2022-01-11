@@ -1,0 +1,596 @@
+
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+img{
+    max-width:100%;
+    width: auto;
+	height: auto;
+}
+
+/* *****************************************************************
+                        GENERALITES
+***************************************************************** */
+body{
+    font-size:1.6rem;
+    font-family:'Open Sans', sans-serif;
+    color:#666;
+    background-color: #f2f2f2;
+    margin:0;
+}
+h1,h2,h3, .noel span, figcaption{
+    font-family:'Amaranth', sans-serif;
+    text-align:center;
+}
+h1,h2,h3, .noel span{
+    color:#96b011;
+}
+header,footer{
+    background-color: #96B011;
+    color:#fff;
+}
+a {
+	text-decoration: none;
+	color:#fff;
+}
+ul{
+    list-style: none;
+    padding-left:0;
+}
+
+header, footer{
+    background-image:url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:bottom;
+}
+figure{
+    margin:0;
+}
+.container{
+    margin:auto;
+    max-width:1100px;
+    
+}
+
+/* *****************************************************************
+                            Header
+***************************************************************** */
+
+.ribbon{
+    position:absolute;
+    top:8px;
+    right:0;
+    width:100px;
+    display:none;
+}
+.livr{
+    display:block;
+    text-align:center;
+    background-color: rgba(0,0,0,0.1);
+    padding:0.5rem;
+}
+.monPanier {
+    opacity:0;
+}
+.panier{
+    border:2px solid  #96B011;
+    border-radius:0 50px 50px 0;
+    font-size:3rem;
+    position:fixed;
+    padding:2rem;
+    left:0;
+    background-color: #96B011;
+
+    
+}
+
+.fa-shopping-cart{
+    background-color: #96B011;
+    padding:10px;
+    border:1px solid #fff;
+    border-radius:50%;
+}
+/***********logo***************/
+.logo{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+.logo img{
+	padding-top:9rem;
+}
+/***********nav***************/
+nav ul {
+	text-align: center;
+	margin: 3rem;
+	
+}
+nav li{
+    padding-bottom:2rem;
+}
+nav a {
+	display: block;
+	padding: 1rem 2rem;
+	transition: all .7s linear;
+	text-transform:uppercase;
+}
+
+nav a:hover, 
+nav a:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+/* *****************************************************************
+                           Main
+***************************************************************** */
+main{
+    line-height:1.8;
+}
+
+/*******noel********/
+.noel{
+    display:none;
+}
+.noel span{
+    display:block;
+    font-size:4rem;
+    text-align:center;
+    font-family:'Amaranth', sans-serif;
+    padding:3rem 0 2rem 0;
+}
+.noel figcaption{
+    color:#666669;
+    font-size:1.4rem;
+}
+/*******slider*******/
+.single-item img{
+    margin:auto;
+}
+/******Choisir*****/
+h1,h2{
+   padding-top:4rem;
+   font-size:3.2rem;
+    
+}
+.bg-blanc{
+    background-color: #fff;
+    
+}
+
+.ch-the{
+    padding:0 2rem 5rem 2rem;
+}
+.choisir{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    
+    
+    
+}
+.choisir figcaption,
+.listing figcaption{
+    text-align:center;
+    font-size:2rem;
+}
+
+/****notre selection****/
+h3{
+    font-size:2.5rem;
+}
+.hr {
+    align-items: center;
+    display: flex;
+}
+
+.hr::before,
+.hr::after {
+    border-top: .0625em solid;
+    content: "";
+    flex: 1;
+    margin: 0 .5em;
+}
+.selection,
+.listing{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    
+}
+.selection article, 
+.listing article {
+    text-align:center;
+    padding-bottom:6rem;
+}
+.prix{
+    font-size:2.4rem;
+    font-weight:bold;
+    padding-bottom:3rem;
+
+}
+
+
+/******voir*****/
+.voir {
+	background-color: #B09067;
+	text-transform:uppercase;
+	padding:2rem 2rem ;
+	text-align: center;
+	color: white;
+	transition: .7s background-color;
+}   
+
+.voir:hover{
+    background-color:rgba(176,144,103,0.75);
+}
+/* *****************************************************************
+                           listing-product
+***************************************************************** */
+.h1, .h1about{
+    padding-bottom:0;
+    margin:0;
+    
+}
+.h2{
+    text-align:left;
+    padding-left:2rem;
+    margin-bottom:0;
+    padding-top:2rem;
+}
+.padding{
+    padding:1.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+.tr {
+    align-items: center;
+    display: flex;
+}
+
+.tr::after {
+    border-top: .0625em solid;
+    content: "";
+    flex: 1;
+    margin: 0 .5em;
+}
+.pre-the{
+    padding:0 3rem 2rem 2rem;
+}
+.imgAbout{
+    width:50px;
+}
+
+/* *****************************************************************
+                           about
+***************************************************************** */
+.h1about{
+    padding-left:1.5rem;
+    padding-top:2rem;
+    
+}
+.h2noir{
+    text-align:left;
+    padding-left:1.5rem;
+    margin-bottom:0;
+    padding-top:1rem;
+    color:#666;
+}
+.concept{
+    background-color: rgba(150, 176, 17, 0.2);
+    padding-top:4rem;
+    padding-bottom:0.5rem;
+}
+.img-svg{
+    display:block;
+    margin:auto;
+}
+
+.p-about{
+    padding-left:1rem;
+}
+
+
+
+/* *****************************************************************
+                            Product
+***************************************************************** */
+
+.h2product{
+    padding-left:1.5rem;
+    margin-bottom:0;
+    padding-top:0;
+    color:#666;
+}
+.h3{
+    color:#666;
+    font-weight:normal;
+    padding-top:0;
+    text-align:center;
+    margin:0;
+}
+.center{
+    text-align:center;
+    padding-top:1rem;
+}
+.flex{
+    display:flex;
+    flex-direction: column;
+}
+/*les stars*/
+.fa-star {
+	color: gray;
+	cursor: pointer;
+	padding: 0.0625rem;
+}
+.gold {
+	color: #ffdc0f;
+}
+.rating,.flexselect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stars {
+	display: inline-flex;
+	justify-content: center;
+	font-size: 2rem;
+}
+.avis{
+    padding-top:1rem;
+}
+/*la liste deroulante*/
+select{
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size:1.6rem;
+    font-family:'Open Sans', sans-serif;
+    color:#666;
+}
+
+.add {
+	background-color: #B09067;
+	text-transform:uppercase;
+	padding:2rem 2rem ;
+	text-align: center;
+	color: white;
+	transition: .7s background-color;
+	display:block;
+	width:300px;
+	/*margin:auto;*/
+	
+}   
+
+.add:hover{
+    background-color:rgba(176,144,103,0.75);
+}
+.price{
+    font-size:4rem;
+    font-weight:bold;
+    margin:1rem;
+}
+.green{
+	    color:#96B011;
+}
+.fa-heart{
+    color:#E7877A;
+    font-size:1.5rem;
+}
+
+/* *****************************************************************
+                            Footer
+***************************************************************** */
+footer{
+    margin-top:3rem;
+    
+}
+
+.aside {
+	
+	text-align: center;
+	background-color:rgba(0,0,0,0.1);
+
+}
+.aside ul{
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+}
+.aside ul li{
+    padding:1rem;
+    margin-bottom:2rem;
+    
+}
+.aside a{
+    text-align:center;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.5);
+}
+
+
+.fa-lock, .fa-truck, .fa-money-bill-alt, 
+.fa-phone,
+.fa-check-circle{
+    display:block;
+    font-size:3rem;
+    color:rgba(255,255,255,0.5);
+    padding:2rem;
+}
+
+.footer-cup{
+    text-align:center;
+}
+.footer-cup strong{
+    font-size:2rem;
+    text-transform:uppercase;
+}
+.footer-cup ul li{
+    padding:2rem;
+}
+.footer-cup a{
+    color:rgba(255,255,255,0.5);
+}
+
+/***hover font awesone***/
+.fa-lock:hover,
+.fa-truck:hover, 
+.fa-money-bill-alt:hover,
+.fa-phone:hover,
+.fa-check-circle:hover,
+.aside a:hover, .footer-cup a:hover{
+    color:rgba(255,255,255,1);
+}
+/*******footer3w*******/
+.footer-3w{
+    padding: 2em;
+    text-align:center;
+    background-color:rgba(0,0,0,0.1);
+}
+.footer-3w img{
+   width:60px;
+   padding-top:15px;
+}
+.footer-3w a{
+    text-decoration:none;
+    color:#fff;
+}
+
+/* *****************************************************************
+                           Responsive
+***************************************************************** */
+/*TABLETTE*/
+@media screen and (min-width: 768px){
+    nav ul {
+    display:flex;
+    justify-content:space-around;
+    }
+    .ribbon{
+        display:inline;
+    }
+    .noel{
+        display: block;
+    }
+    .logo{
+        flex-direction:row;
+        align-items: center;
+        
+    }
+    .logo img{
+        padding:3rem;
+    }
+    .prixTotal{
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        align-items:center;
+        
+    }
+    .panier{
+    border:0;
+    border-radius:0;
+    font-size:3rem;
+    position:inherit;
+    background-color:transparent;
+    align-items: center;
+    }
+    
+    .monPanier{
+        opacity:1;
+    }
+    .choisir{
+    display:flex;
+    }
+    
+    
+    .aside ul{
+    
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+    }
+    .footer-cup{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+    }
+    
+    
+    /*page about*/
+    .left{
+    float:left;
+    }
+    .right{
+    float:right;
+    }
+    .clear {
+    clear:both;
+    }
+    .imgabout{
+        width:50%;
+    }
+    .h3{
+        text-align:left;
+        padding-left:1.5rem;
+    }
+   /*** product***/
+    .h2product{
+        text-align:left;
+        padding-left:3rem;
+    }
+    .flexProduct{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flexselect{
+        align-items: flex-end;
+    }
+}
+    
+    
+    
+ 
+
+/*DESKTOP*/
+@media screen and (min-width: 980px){
+    .choisir{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+   .selection ,
+   .listing{
+    flex-direction: row;
+    
+    
+    }
+    .selection article,
+    .listing article{
+        justify-content:space-between;
+        text-align:center;
+        width:30%;
+    }
+     .concept ul{
+        display:flex;
+    }
+    .concept p{
+        text-align:center;
+    }
+    
+}
